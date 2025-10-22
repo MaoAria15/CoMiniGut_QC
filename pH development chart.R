@@ -5,10 +5,12 @@
 # install.packages("extrafont")
 # install.packages("tidyr")
 # install.packages("ggtext")
+# install.packages("readxl")
 library(extrafont)
 library(ggrepel)
 library(tidyr)
 library(RColorBrewer)
+library(readxl)
 #library(tidyverse)
 display.brewer.all(colorblindFriendly = T)
 
@@ -19,11 +21,12 @@ setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
 
 
 ##3. Load the .csv file from your working directory, make sure you file is saved in the same folder with this R script####
-Run <- read.csv("Run.csv", sep = ",")
+# Run <- read.csv("Run.csv", sep = ",")
+Run <- read_excel("Run.xls")
 
 
 ##4.Prepare the data sheet, you will have one data.frame for overview of ph, and another data.frame for calculating NaOH dosage.####
-Run <- Run[, !names(Run) %in% c("pH.cha..6","SP1.target.pH","SP2.target.pH","SP3.target.pH","SP4.target.pH")]
+Run <- Run[, !names(Run) %in% c("pH cha.6","SP1 target pH","SP2 target pH","SP3 target pH","SP4 target pH")]
 colnames(Run) <- c("Time","Chamber1","Chamber2","Chamber3","Chamber4","Chamber5", "target_ph", "SP1", "SP2", "SP3", "SP4", "SP5")
 Run[, 1] <- 1:nrow(Run)
 development_ph <- Run[, 1:7]

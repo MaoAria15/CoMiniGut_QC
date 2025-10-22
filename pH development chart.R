@@ -25,7 +25,7 @@ display.brewer.all(colorblindFriendly = T)
 setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
 
 
-##3. Load the .csv file from your working directory, make sure you file is saved in the same folder with this R script####
+##3. Load the .csv file from your working directory, make sure you file is saved in the same folder with this R script#####
 # Run <- read.csv("Run.csv", sep = ",")
 Run <- read_excel("Run.xls")
 

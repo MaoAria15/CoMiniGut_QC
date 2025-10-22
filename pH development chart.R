@@ -6,12 +6,16 @@
 # install.packages("tidyr")
 # install.packages("ggtext")
 # install.packages("readxl")
-#library(tidyverse)
+# install.packages("dplyr")
+# install.packages("cowplot")
+library(tidyverse)
 library(extrafont)
 library(ggrepel)
 library(tidyr)
 library(RColorBrewer)
 library(readxl)
+library(dplyr)
+library(cowplot)
 
 display.brewer.all(colorblindFriendly = T)
 

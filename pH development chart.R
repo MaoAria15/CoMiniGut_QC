@@ -46,7 +46,7 @@ development_ph_filter <- development_ph[rows_to_keep, ]
 ##5.2Filter the NaOH data, fill the concentration and dose volunme set up of your project####
 
 Concentration <- 1 #1M NaOH
-Dose_vol <- 5 #ul
+Dose_vol <- 5 #ul This can change base on different experiment set-up, in some project its 2.5ul
 
 sp_cols <- c("SP1", "SP2", "SP3", "SP4", "SP5")
 

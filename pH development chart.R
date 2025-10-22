@@ -6,12 +6,13 @@
 # install.packages("tidyr")
 # install.packages("ggtext")
 # install.packages("readxl")
+#library(tidyverse)
 library(extrafont)
 library(ggrepel)
 library(tidyr)
 library(RColorBrewer)
 library(readxl)
-#library(tidyverse)
+
 display.brewer.all(colorblindFriendly = T)
 
 
@@ -169,14 +170,14 @@ totals <- sapply(sp_cols, function(sp) {
   sum(NaOH_dose[[sp]]) * Concentration * Dose_vol
 })
 
-results <- data.frame(
+Sum_NaOH <- data.frame(
   Sample = chamber_cols,
   Total = totals
 )
 
-results
+Sum_NaOH
 
 ##9. Resurlt summary#################################
 p_ph_development
 p_NaOH_development
-results
+Sum_NaOH
